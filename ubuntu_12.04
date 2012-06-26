@@ -25,9 +25,19 @@ cd xbmc-11.0
 make
 sudo make install
 
-6)nvidia (cd git)
-git clone git://github.com/gustfred/htpc.git
+6)Problems with gfxcard (also newest additional driver)
+sudo apt-get install libqt3-mt mesa-utils python-qt3 python-sip
+
+7)nvidia (cd git)
+git clone git://github.com/gustfred/htpc.git   (should already be done)
 cd htpc/htpc/
 chmod 755 nvidia.sh
 CTRL+ALT+F1
 ./nvidia.sh
+
+8) Autostart with fullscreen
+cd /etc/lightdm/
+sudo cp -p lightdm.conf lightdm.old
+
+9) Xbmc remote
+enable config via http in network settings xbmc
