@@ -38,6 +38,24 @@ CTRL+ALT+F1
 8) Autostart with fullscreen
 cd /etc/lightdm/
 sudo cp -p lightdm.conf lightdm.old
+lightdm.conf should look like this after editing
+[SeatDefaults]
+user-session=XBMC
+greeter-session=unity-greeter
+autologin-user=fredrik
+autologin-user-timeout=0
+
+cd /usr/share/xsession
+sudo mkdir old
+sudo mv * old/
+sudo vi XBMC.desktop
+should look like this:
+[Desktop Entry]
+Name=XBMC
+Comment=This session starts XBMC
+Exec=xbmc-standalone
+TryExec=xbmc-standalone
+Type=Application
 
 9) Xbmc remote
 enable config via http in network settings xbmc
