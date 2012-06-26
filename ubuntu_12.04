@@ -1,0 +1,33 @@
+1.)Audio
+Change audio device to hdmi.
+
+2)installing gnome 3
+sudo add-apt-repository ppa:gnome3-team/gnome3
+sudo apt-get update
+sudo apt-get install gnome-shell
+
+3)ssh
+sudo apt-get install ssh
+(perhaps sudo service ssh start)
+
+4)git
+sudo apt-get install git
+cd /home/fredrik
+mkdir git
+
+5)xbmc (cd git)
+sudo apt-get build-dep xbmc
+Download xbmc-11.0.tar.gz
+tar xvfz xbmc-11.0.tar.gz
+cd xbmc-11.0
+./bootstrap
+./configure
+make
+sudo make install
+
+6)nvidia (cd git)
+git clone git://github.com/gustfred/htpc.git
+cd htpc/htpc/
+chmod 755 nvidia.sh
+CTRL+ALT+F1
+./nvidia.sh
