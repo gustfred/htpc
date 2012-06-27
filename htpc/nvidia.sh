@@ -1,4 +1,5 @@
 #!/bin/sh
+#git test
 # v5 Removed NoFlip setting and added XBMC sync settings.
 # v4 Adding support for XBMC Live
 # v3 Added check for .nvidia-settings-rc
