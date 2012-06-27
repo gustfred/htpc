@@ -1,0 +1,61 @@
+1.)Audio
+Change audio device to hdmi.
+
+2)installing gnome 3
+sudo add-apt-repository ppa:gnome3-team/gnome3
+sudo apt-get update
+sudo apt-get install gnome-shell
+
+3)ssh
+sudo apt-get install ssh
+(perhaps sudo service ssh start)
+
+4)git
+sudo apt-get install git
+cd /home/fredrik
+mkdir git
+
+5)xbmc (cd git)
+sudo apt-get build-dep xbmc
+Download xbmc-11.0.tar.gz
+tar xvfz xbmc-11.0.tar.gz
+cd xbmc-11.0
+./bootstrap
+./configure
+make
+sudo make install
+
+6)Problems with gfxcard (also newest additional driver)
+sudo apt-get install libqt3-mt mesa-utils python-qt3 python-sip
+
+7)nvidia (cd git)
+git clone git://github.com/gustfred/htpc.git   (should already be done)
+cd htpc/htpc/
+chmod 755 nvidia.sh
+CTRL+ALT+F1
+./nvidia.sh
+
+8) Autostart with fullscreen
+cd /etc/lightdm/
+sudo cp -p lightdm.conf lightdm.old
+lightdm.conf should look like this after editing
+[SeatDefaults]
+user-session=XBMC
+greeter-session=unity-greeter
+autologin-user=fredrik
+autologin-user-timeout=0
+
+cd /usr/share/xsession
+sudo mkdir old
+sudo mv * old/
+sudo vi XBMC.desktop
+should look like this:
+[Desktop Entry]
+Name=XBMC
+Comment=This session starts XBMC
+Exec=xbmc-standalone
+TryExec=xbmc-standalone
+Type=Application
+
+9) Xbmc remote
+enable config via http in network settings xbmc
