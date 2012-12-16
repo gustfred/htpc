@@ -2,6 +2,23 @@
 http://forum.xbmc.org/showthread.php?tid=116996
 http://youresuchageek.blogspot.fr/2012/06/xbmc-install-and-config-howto-for-linux.html
 
+0.1) Fix audio
+sudo apt-get remove --purge libasound2-plugins
+
+0.2) Create /etc/asound.conf
+pcm.!default {
+  type plug
+  slave {
+#    pcm "hw:1,0" #delete the first hash for sound over analog
+#    pcm "hw:1,1" #delete the first hash for sound over optical
+    pcm "hw:0,3" #delete the first hash for sound over hdmi
+    rate 48000
+  }
+}
+
+0.3) Settings in XBMC
+Set to analog and output hdmi (alsa)
+
 -------
 
 1) Get some good stuff
