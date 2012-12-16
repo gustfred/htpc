@@ -13,7 +13,7 @@ git clone git://github.com/xbmc/xbmc.git
 
 5) Build Xbmc
 ./bootstrap
-./configure PREFIX=/usr/local/latest
+./configure --prefix=/usr/local/latest
 make
 make -C lib/addons/script.module.pil
 sudo make install
