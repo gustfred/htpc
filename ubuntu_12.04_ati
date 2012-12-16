@@ -1,3 +1,9 @@
+0) Another option is to follow this:
+http://forum.xbmc.org/showthread.php?tid=116996
+http://youresuchageek.blogspot.fr/2012/06/xbmc-install-and-config-howto-for-linux.html
+
+-------
+
 1) Get some good stuff
 sudo apt-get install ssh gnome gnome-shell mesa-utils
 
