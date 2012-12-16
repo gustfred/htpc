@@ -1,5 +1,5 @@
 1) Get some good stuff
-sudo apt-get install ssh gnome gnome-shell
+sudo apt-get install ssh gnome gnome-shell mesa-utils
 
 2) Get the dependencies
 sudo add-apt-repository ppa:team-xbmc/ppa
