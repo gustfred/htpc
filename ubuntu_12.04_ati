@@ -1,0 +1,20 @@
+1) Get some good stuff
+sudo apt-get install ssh gnome gnome-shell
+
+2) Get the dependencies
+sudo add-apt-repository ppa:team-xbmc/ppa
+sudo add-apt-repository ppa:team-xbmc/xbmc-ppa-build-depends
+sudo add-apt-repository ppa:team-xbmc/unstable
+sudo apt-get update
+sudo apt-get build-dep xbmc
+
+4) Download latest xbmc
+git clone git://github.com/xbmc/xbmc.git
+
+5) Build Xbmc
+./bootstrap
+./configure PREFIX=/usr/local/latest
+make
+make -C lib/addons/script.module.pil
+sudo make install
+
